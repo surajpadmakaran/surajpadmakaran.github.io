@@ -270,6 +270,22 @@
         html { scroll-behavior: auto; }
         .card, .read-link svg, .back-link svg { transition: none; }
       }
+    
+      /* ——— Reader refit (Oct 30, 2026): larger type, clear shelves — built for the education audience ——— */
+      body { font-size: 18.5px; line-height: 1.7; }
+      .lede { font-size: clamp(20px, 2.6vw, 23px); line-height: 1.55; }
+      .shelf-title { font-family: "Newsreader", Georgia, serif; font-size: clamp(26px, 3.4vw, 33px); font-weight: 600; letter-spacing: -.01em; margin: 44px 0 6px; }
+      .shelf-title.first { margin-top: 4px; }
+      .shelf-intro { color: var(--ink-2); font-size: 18px; line-height: 1.6; max-width: 44em; margin: 0 0 24px; }
+      .card h3 { font-size: 24px; }
+      .card p { font-size: 16.5px; line-height: 1.55; }
+      .featured p { font-size: 18px; line-height: 1.6; }
+      .meta { font-size: 13.5px; }
+      #art-body p { font-size: 20.5px; line-height: 1.8; }
+      #art-body li { font-size: 20.5px; line-height: 1.75; }
+      #art-body h2 { font-family: "Newsreader", Georgia, serif; font-size: 30px; line-height: 1.2; }
+      #art-body blockquote { font-size: 22px; line-height: 1.6; }
+      .article-hero .standfirst { font-size: 22px; line-height: 1.55; }
     </style>
     <script type="application/ld+json">
     {
@@ -339,12 +355,17 @@
 
         <section class="block" id="writing">
           <div class="section-head">
-            <h2>Latest writing</h2>
-            <span class="note">new here? start with the Explained Simply posts — written for everyone</span>
+            <h2>Writing</h2>
+            <span class="note">two shelves — start with the first</span>
           </div>
+          <h3 class="shelf-title first">Explained Simply — for everyone</h3>
+          <p class="shelf-intro">Plain-English lessons on the scam calls, passwords, updates and habits that decide whether a household stays safe online. Written for seniors, youngsters and families — start here.</p>
           <div id="featured-slot"></div>
           <div style="height:22px"></div>
           <div class="grid" id="post-grid"></div>
+          <h3 class="shelf-title">Field Notes — for fellow practitioners</h3>
+          <p class="shelf-intro">My professional notebook: GRC engineering and security automation, written for people who do this work.</p>
+          <div class="grid" id="field-grid"></div>
         </section>
 
         <section class="block" id="topics">
@@ -614,6 +635,7 @@
       var homeView = document.getElementById("home-view");
       var grid = document.getElementById("post-grid");
       var featuredSlot = document.getElementById("featured-slot");
+      var fieldGrid = document.getElementById("field-grid");
       var arrowSvg = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>';
 
       function metaHtml(p) {
@@ -621,7 +643,9 @@
       }
 
       function renderHome() {
-        var f = POSTS[0];
+        var edu = POSTS.filter(function (p) { return p.kicker === "Explained Simply"; });
+        var field = POSTS.filter(function (p) { return p.kicker !== "Explained Simply"; });
+        var f = edu[0];
         featuredSlot.innerHTML =
           '<article class="featured" data-slug="' + f.slug + '" tabindex="0" role="link" aria-label="' + f.title + '">' +
             '<div class="thumb"><img src="' + f.img + '" alt="' + f.alt + '" /></div>' +
@@ -634,7 +658,7 @@
             "</div>" +
           "</article>";
 
-        grid.innerHTML = POSTS.slice(1).map(function (p) {
+        function cardHtml(p) {
           return '<article class="card" data-slug="' + p.slug + '" tabindex="0" role="link" aria-label="' + p.title + '">' +
             '<div class="thumb"><img src="' + p.img + '" alt="' + p.alt + '" loading="lazy" /></div>' +
             '<div class="body">' +
@@ -645,7 +669,10 @@
               '<div class="meta" style="margin-top:14px">' + metaHtml(p) + "</div>" +
             "</div>" +
           "</article>";
-        }).join("");
+        }
+
+        grid.innerHTML = edu.slice(1).map(cardHtml).join("");
+        fieldGrid.innerHTML = field.map(cardHtml).join("");
 
         var clickables = document.querySelectorAll("[data-slug]");
         for (var i = 0; i < clickables.length; i++) {
