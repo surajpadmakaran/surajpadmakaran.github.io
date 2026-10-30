@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://surajpadmakaran.github.io/sitemap.xml
