@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <meta name="description" content="Suraj Padmakaran — cybersecurity explained for everyone: plain-English safety writing for seniors, youngsters and families, plus field notes on GRC and security automation." />
     <link rel="icon" href="data:," />
+    <link rel="alternate" type="application/rss+xml" title="Suraj Padmakaran — Cybersecurity, Explained for Everyone" href="feed.xml" />
     <title>Suraj Padmakaran — Cybersecurity, Explained for Everyone</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -286,6 +287,11 @@
       #art-body h2 { font-family: "Newsreader", Georgia, serif; font-size: 30px; line-height: 1.2; }
       #art-body blockquote { font-size: 22px; line-height: 1.6; }
       .article-hero .standfirst { font-size: 22px; line-height: 1.55; }
+
+      .sub-btn { display: inline-block; background: var(--accent); color: #ffffff; font-weight: 600; font-size: 18px; line-height: 1.3; padding: 14px 26px; border-radius: 999px; text-decoration: none; margin: 4px 10px 4px 0; }
+      .sub-btn:hover { background: var(--accent-bright); }
+      .sub-btn.ghost { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+      .sub-note { color: var(--ink-3); font-size: 15.5px; line-height: 1.6; max-width: 42em; }
     </style>
     <script type="application/ld+json">
     {
@@ -317,6 +323,7 @@
           <a href="#writing" data-nav>Writing</a>
           <a href="#topics" data-nav class="hide-sm">Topics</a>
           <a href="#about" data-nav>About</a>
+          <a href="#subscribe" data-nav>Subscribe</a>
         </nav>
       </div>
     </header>
@@ -419,7 +426,20 @@
         </section>
       </div>
 
-      <footer class="site">
+      <section class="block" id="subscribe">
+          <div class="section-head">
+            <h2>Never miss a post</h2>
+            <span class="note">free, always</span>
+          </div>
+          <p class="shelf-intro">A new plain-English lesson most weeks — the latest scam making the rounds, the habit that defeats it, the warning worth knowing about. Written for seniors, youngsters and families, and for the people who look out for them.</p>
+          <p>
+            <a class="sub-btn" href="mailto:surajpadmakaran@gmail.com?subject=Subscribe%20to%20the%20blog&amp;body=Please%20add%20me%20to%20the%20blog%20mailing%20list.">Subscribe by email</a>
+            <a class="sub-btn ghost" href="feed.xml">Subscribe by RSS</a>
+          </p>
+          <p class="sub-note">The email button opens your mail app with a short subscribe note addressed to me, and I add you personally. Your address is used only for new-post emails — no spam, never shared, and you can leave any time by replying &#8220;stop&#8221;.</p>
+        </section>
+
+        <footer class="site">
         <div class="wrap foot-inner">
           <div>
             <span class="fname">Suraj Padmakaran</span>

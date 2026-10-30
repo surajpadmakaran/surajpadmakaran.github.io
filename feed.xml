@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Suraj Padmakaran — Cybersecurity, Explained for Everyone</title>
+    <link>https://surajpadmakaran.github.io/</link>
+    <atom:link href="https://surajpadmakaran.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Plain-English cybersecurity for everyone — seniors, youngsters and families first. Scam calls, passwords, updates, and the habits that keep a household safe online.</description>
+    <language>en-us</language>
+    <item>
+      <title>The Call That Isn&#x27;t Your Bank</title>
+      <link>https://surajpadmakaran.github.io/#post/the-call-that-isnt-your-bank</link>
+      <guid isPermaLink="true">https://surajpadmakaran.github.io/#post/the-call-that-isnt-your-bank</guid>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <description>The name on the screen says your bank. The voice says act now. Almost everything about that call is a lie — here is how the trick works, and the three habits that defeat it every time.</description>
+    </item>
+    <item>
+      <title>The Flaw Was Hiding in the Compression Library</title>
+      <link>https://surajpadmakaran.github.io/#post/http2shell-brotli-flaw</link>
+      <guid isPermaLink="true">https://surajpadmakaran.github.io/#post/http2shell-brotli-flaw</guid>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <description>A tiny program that unpacks compressed web data — built into websites, apps and tools you use every day — had a mistake in it. In October it went from discovery to confirmed attacks in six days. Here is what happened, in plain English.</description>
+    </item>
+    <item>
+      <title>Ransomware Still Walks In Through the Front Door</title>
+      <link>https://surajpadmakaran.github.io/#post/ransomware-front-door</link>
+      <guid isPermaLink="true">https://surajpadmakaran.github.io/#post/ransomware-front-door</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <description>A ransomware gang breached more than 600 organizations in two years — not by breaking in, but by logging in. The same front door exists in every home. Here is how it works, and how to lock yours.</description>
+    </item>
+    <item>
+      <title>The Warning List Arrives Late. Don&#x27;t Wait for It.</title>
+      <link>https://surajpadmakaran.github.io/#post/kev-catalog-trails-attackers</link>
+      <guid isPermaLink="true">https://surajpadmakaran.github.io/#post/kev-catalog-trails-attackers</guid>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
+      <description>The US government keeps a list of software flaws that criminals are confirmed to be using. In October, attackers moved on one flaw within two hours — and the official list caught up eight days later. That gap is not just a problem for IT departments. It lives in every phone and laptop at home.</description>
+    </item>
+    <item>
+      <title>Find the Task Everyone Silently Suffers Through</title>
+      <link>https://surajpadmakaran.github.io/#post/thirty-minutes-to-ninety-seconds</link>
+      <guid isPermaLink="true">https://surajpadmakaran.github.io/#post/thirty-minutes-to-ninety-seconds</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Every security program has one: the recurring chore everyone dreads and nobody questions. Here&#x27;s how to spot it — and why retiring it matters more than the minutes it saves.</description>
+    </item>
+    <item>
+      <title>Your POA&amp;M Is Not a Spreadsheet Graveyard</title>
+      <link>https://surajpadmakaran.github.io/#post/poam-is-not-a-spreadsheet-graveyard</link>
+      <guid isPermaLink="true">https://surajpadmakaran.github.io/#post/poam-is-not-a-spreadsheet-graveyard</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Plans of Action &amp; Milestones die the same way everywhere: a workbook nobody trusts, updated in a panic before the auditor arrives. It doesn&#x27;t have to work that way.</description>
+    </item>
+    <item>
+      <title>Learn to Script Before You Learn to Buy Tools</title>
+      <link>https://surajpadmakaran.github.io/#post/script-before-you-buy</link>
+      <guid isPermaLink="true">https://surajpadmakaran.github.io/#post/script-before-you-buy</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+      <description>The security industry will happily sell you a platform for every problem. The engineers who stay in demand learn to solve the problem first — usually with forty lines of code.</description>
+    </item>
+    <item>
+      <title>Evidence Collection Is a Pipeline, Not a Fire Drill</title>
+      <link>https://surajpadmakaran.github.io/#post/evidence-is-a-pipeline</link>
+      <guid isPermaLink="true">https://surajpadmakaran.github.io/#post/evidence-is-a-pipeline</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description>If your audit evidence comes from screenshots taken the night before, you don&#x27;t have an evidence problem — you have an architecture problem. Here&#x27;s the fix.</description>
+    </item>
+  </channel>
+</rss>
