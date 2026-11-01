@@ -8,7 +8,7 @@
     <meta property="og:title" content="Simply Explained by Suraj — Cybersecurity in Plain English" />
     <meta property="og:description" content="Cybersecurity in plain English for seniors, parents, teens and families — a SafeGrade project by Suraj Padmakaran. No jargon, no scare tactics." />
     <meta property="og:type" content="website" />
-    <link rel="icon" href="data:," />
+    <link rel="icon" type="image/webp" href="data:image/webp;base64,UklGRoQBAABXRUJQVlA4IHgBAADwCACdASpAAEAAPxF6sFGsKCSiqA35gCIJQBn0MZfJn3wS/WbdOKiNb+teNn9PRnpVR6gTQ/Ywxfg1M8KJBZB78dR0jpC+C6ZYpt/0vfUdYAD+8iJeDLbYJO6SbNKuS4AnDbHM1sTFAR0LV3i+SP0D/w/sPykjMhRnH9ldEBw1dtv+CVvtHDJDkN8dXk3/z6LkaCG+Prvhrh5rfQ5OgaF1zdeUtOBn5CxlUWaA8Ug7ZPlTiPv8XOWsR6r0xginl16wOce6B780Hbjs7DKL6WLDKHmvvQsBFrhmdt6uT1n/G7ydt9dORdcpMWofEDzq3+2enya9tygX0cV2iv0/DswUJfUFmxYug9p0abPirxk4QPTpYcMUX1LJm65mg8Or8ydRzV3n9BPBMEPj3GVcMA7Sss4psp9a1iHtuUDNgtTnKJbhALkK2uMvvyz1GSRRroBSLmdFw1jStvMe/U3bNAFlMFfEsbVXIg1Oa0hpDXq5uh9uYjNAAAAA" />
     <link rel="alternate" type="application/rss+xml" title="Suraj Padmakaran — Cybersecurity, Explained for Everyone" href="feed.xml" />
     <title>Simply Explained by Suraj — Cybersecurity in Plain English</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -79,10 +79,8 @@
       .brand { display: flex; align-items: baseline; gap: 10px; color: var(--ink); }
       .brand:hover { text-decoration: none; }
       .brand .mark {
-        font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 500;
-        color: var(--accent-bright); border: 1px solid var(--accent);
-        padding: 2px 7px; border-radius: 6px; letter-spacing: .04em;
-        align-self: center;
+        width: 34px; height: 34px; border-radius: 8px; object-fit: cover;
+        display: block; align-self: center;
       }
       .brand .name { font-weight: 700; font-size: 17px; letter-spacing: -.01em; }
       nav.main { display: flex; gap: 26px; }
@@ -274,7 +272,7 @@
       }
       .prose .signoff { color: var(--ink-2); font-size: 16px; border-top: 1px solid var(--line); padding-top: 20px; margin-top: 36px; }
       .brand-block { display: flex; gap: 14px; align-items: flex-start; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 24px; }
-      .brand-block .bb-mark { font-family: "IBM Plex Mono", monospace; font-weight: 700; font-size: 14px; color: var(--accent-bright); border: 1px solid var(--accent-bright); border-radius: 8px; padding: 6px 8px; background: var(--surface); }
+      .brand-block .bb-mark { width: 42px; height: 42px; border-radius: 9px; object-fit: cover; display: block; flex: none; }
       .brand-block .bb-name { font-family: "Newsreader", Georgia, serif; font-size: 22px; line-height: 1.2; color: var(--ink); }
       .brand-block .bb-line { color: var(--ink-2); font-size: 15.5px; margin: 5px 0 9px; }
       .brand-block a { color: var(--accent-bright); font-weight: 600; font-size: 15px; }
@@ -374,7 +372,7 @@
     <header class="site">
       <div class="wrap site-inner">
         <a class="brand" href="#" id="brand-home">
-          <span class="mark">SP</span>
+          <img class="mark" src="data:image/webp;base64,UklGRpoCAABXRUJQVlA4II4CAAAQDgCdASpgAGAAPxF+t1YsJ6UjpXVbeYAiCWUA0rAJhZ3mmq5e6t0Bz45qr6P2sN/+SVMUBUgAFuSBhGr2HjHi8na2BOBi2b0d0iyRQ7A1jsGcOo11YAv9e8IjYkDs4g9McVK8yRj6lrAvOkLlgtXzlzFfYXPTaVUAAP7wxAuU25a6lwCqvVhvNSkefM41LUQF0iHnFD5NTI5oAP5EX9ohPlv6iRv1mjJ08CNagwDfzTuwoZ/XNwyqyah/kDFHNFHvHrB4DpC5iQVG+utJf43X+gkbCte5vuJe81n6vFyF0mNzIuxHpGbRJ59vI8zYD+KGvYZGU0aen/4IO8/XrYX72BGYJdwHccZTcvUwDn+xd1vcRzZb7x3WufIkhooBaWxzHtC3gvhq0nswEzxspbixOUxiXgk0/Mim6ZxaqC1P7I0v/ALyykQe7jsVhAs3jDV2PZWNpNx7x0vnNVzd9no7GRHmL+AYUptGDgmW8RqOM4b6Z8k4/HW/GUShv2owRi4J53j+QNeu6rFcqcUJ0GM8wUe5hDUf8EcQG2MXziwJuZsABSpfy9LftroSnuwjco2VzAR4jWTOg1GQpwS1Of/Buzv3MGzOSYjfjaLYSZt75zuUoz0K1CSsyhP9NWMRsuSnftbzdI9Vs1hPicLK32zZ1DlFYTDwFpx1ki8/8ygwrFOEl6XA3+Sv7DEe+RIZ4S62RGwTrm9gWg8RAjCQW5t6YBIf35GCWkqH/5txOIvhHvit8F/igtA9RdrSXDwd5fOg9MyAOxMB+yDR6Z/K97PiLx4xcnxPXwo/RHbhFe1uGCD2qx+Zs4CJxedEsiGV0GimAqmMeZsVUTxIVC90fHcfX7UFeZe65NhUDOoAAAA=" alt="SafeGrade logo" width="34" height="34" />
           <span class="name">SafeGrade</span>
         </a>
         <nav class="main">
@@ -580,7 +578,7 @@
         <div class="article-img"><img id="art-img" src="data:image/webp;base64,UklGRlIFAABXRUJQVlA4IEYFAADQHQCdASr8AI4APxGEulcsKCWjpZKZaYAiCWNu16VbjwWVt4gTDYFJ+l5fG7aT133hmfgVwA03R/+Lv9XjXfs9+zai+ojn/27/jq7QOoDvdlWMLdOWbwDivd3d3d3d3d59Fq93d3d3d6zoSi1e7u7u7vWbgAUre+sQ9ZZF6MrinEq3La5LQwUumREvxlnqhkknU4N4SdCOBobMOrFamh0AXoPpompUBHNFDOvsKwapDqS9rJ/MpQL90Kqtna/yZtbgVDqI6keqcCcahrJNmTVmuqW0IY7DUumMHyT7H31rqK0acyA3XYQsX4pWiIiIiIiIiIiIiIgQAP79i6mVdDO4hPyNlT/ceZPxCJgEDIbm2IF9qAASjBplg0NFpvnYfEnqyndyP4Oa/OYkDeh4Ewf34+R6SzbxJ4W/p/hqQQKR5wz2yD8VmxMkiNIjB7i5ec2R0ktJmjqzQFyfKQoYjAwP0LvEAfCuZ1/UYK73inbXDivB6NgAQUGj3X/RoZOTmohdeL//2tfi8wYZl9pWBZlZKiF+9mWLrACgYy+eKhejoKY8Wobeg5BdGT3KfVLeegTRARl+pHHQ7W6r1bKpiFyu4+wvWNc50g1zlDTkIkre1P5bt8hszb1JaMuG7F47TJaiJrvWLWAtVwxMbIRSwEDo/o+hb57XSZpshJPbhwz3A1G9ECHXuk3N44jsQsgahV//a27C/jcCuC2sF+Oj3LrD6+o9SkICZkrkGT3t/P0T9hcAMBqdmrashPmmHDrFjf8HA+IDguVzUmW+sNwEIXkJG9rBgIpjEVt5TcttZPNTNqJi7Ih3qNards9+aGYj+Zs4Jn337q3HLduRy+9jjpdl/M80AcDoycqKmdHG2B4ezdF6iI55aqSeFQ3PjriS7q4RZB1JZsmBOb/NxZbtCME5rmkdZr3RT2q8xhvHPcJ1DD9ctbDQ0V1jXwSJ+Rz6D4ssjzLoeLbqtyxitVwqxfRUvLOZlibCFA6O7KA5Ril7i+XutMVS+4As8E9AwJTNzC/tQe5zWtghMZY7cgZejregUVm+w5DnIabP3gORFdMo84V2O2JTAD4lu/pYKl5XeCRh6VP/uylW7xMzPa8WQmAqinOHvZxLmV14/Ox7kzaaUjg29B7T9sP2AWVFweb/eppqmBSnBrp39CIMyb5MddxtomJeX1HsGQ+M/BNQSGgraVCZkyvCWkQdxBxZ95RKG9Gkp8EC0fimV2wGBb2vEgWzSnfMQZSEGWyanj3p4sFhYS2kpJqK37qzA4ne9WFmaFbXVF4B78M8tP9hdz2viF9c0gRj9ylKHD8mxS3k01ds87zqHT6FjIgTAKQC6xSiS/XXQ1qQv2QUjoF92kyUnuUYUELFJt1CSUx0a+UQQwyVJbKw5YoC4z3g2OxEq0BAKzWSZhVG4parAPtLGMd8QmgqKoRifrBxRABiIyaa8LgmHUtFI5s8XJtRvFqtGfl1h9Tr4BdQ0dAztHZ/Y2BDIq6lzQQMQ+PwOW96Y4k1kgl+8gYhgODrBVT5hHEfUgWXkxk8a0L31Yaru2RJ3ivx76hROrzuj5fe6c2deJF0DnQj5Wg3jXk5wjbWOySv5uhBn4M1sWAM0tvivpw6tJA93HDSGcit0+pMHSfMGC+lgX3ws36d975J69OMQqrB3/sczDPYp+sg//tbeuJ4fDwrazaMwv5JlN5/5LRM2OI+oB0E5Qq+mMycNwawPfVy3n1ryn+peJ3mXjrovGXHA0XnD2kbI8BwPhs+J0LUx9D011FZ4LlukaZrJZwAAAAAAAAAAAAAAAAAAAA=" alt="Article illustration" /></div>
         <article class="prose" id="art-body"></article>
         <div class="brand-block">
-          <span class="bb-mark">SP</span>
+          <img class="bb-mark" src="data:image/webp;base64,UklGRpoCAABXRUJQVlA4II4CAAAQDgCdASpgAGAAPxF+t1YsJ6UjpXVbeYAiCWUA0rAJhZ3mmq5e6t0Bz45qr6P2sN/+SVMUBUgAFuSBhGr2HjHi8na2BOBi2b0d0iyRQ7A1jsGcOo11YAv9e8IjYkDs4g9McVK8yRj6lrAvOkLlgtXzlzFfYXPTaVUAAP7wxAuU25a6lwCqvVhvNSkefM41LUQF0iHnFD5NTI5oAP5EX9ohPlv6iRv1mjJ08CNagwDfzTuwoZ/XNwyqyah/kDFHNFHvHrB4DpC5iQVG+utJf43X+gkbCte5vuJe81n6vFyF0mNzIuxHpGbRJ59vI8zYD+KGvYZGU0aen/4IO8/XrYX72BGYJdwHccZTcvUwDn+xd1vcRzZb7x3WufIkhooBaWxzHtC3gvhq0nswEzxspbixOUxiXgk0/Mim6ZxaqC1P7I0v/ALyykQe7jsVhAs3jDV2PZWNpNx7x0vnNVzd9no7GRHmL+AYUptGDgmW8RqOM4b6Z8k4/HW/GUShv2owRi4J53j+QNeu6rFcqcUJ0GM8wUe5hDUf8EcQG2MXziwJuZsABSpfy9LftroSnuwjco2VzAR4jWTOg1GQpwS1Of/Buzv3MGzOSYjfjaLYSZt75zuUoz0K1CSsyhP9NWMRsuSnftbzdI9Vs1hPicLK32zZ1DlFYTDwFpx1ki8/8ygwrFOEl6XA3+Sv7DEe+RIZ4S62RGwTrm9gWg8RAjCQW5t6YBIf35GCWkqH/5txOIvhHvit8F/igtA9RdrSXDwd5fOg9MyAOxMB+yDR6Z/K97PiLx4xcnxPXwo/RHbhFe1uGCD2qx+Zs4CJxedEsiGV0GimAqmMeZsVUTxIVC90fHcfX7UFeZe65NhUDOoAAAA=" alt="SafeGrade logo" width="42" height="42" />
           <div>
             <div class="bb-name">Simply Explained by Suraj</div>
             <div class="bb-line">A SafeGrade project · Cybersecurity, explained simply · A new chapter every Wednesday</div>
