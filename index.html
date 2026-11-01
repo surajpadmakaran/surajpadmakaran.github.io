@@ -212,6 +212,9 @@
       #article-view { display: none; }
       body.reading #home-view { display: none; }
       body.reading #article-view { display: block; }
+      #field-view { display: none; }
+      body.fieldnotes #home-view { display: none; }
+      body.fieldnotes #field-view { display: block; }
       .progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); width: 0; z-index: 60; }
       .article-hero { padding: 48px 0 0; max-width: 760px; }
       .back-link { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-size: 15px; margin-bottom: 30px; }
@@ -329,6 +332,7 @@
         </a>
         <nav class="main">
           <a href="#writing" data-nav>Writing</a>
+          <a href="#field-notes" id="nav-field">Field Notes</a>
           <a href="#topics" data-nav class="hide-sm">Topics</a>
           <a href="#about" data-nav>About</a>
           <a href="#subscribe" data-nav>Subscribe</a>
@@ -343,7 +347,7 @@
           <div>
           <div class="rule"></div>
           <h1>Cybersecurity,<br /><em>explained for everyone.</em></h1>
-          <p class="lede">Plain-English cybersecurity for the people attackers actually target — seniors answering scam calls, youngsters setting up their first accounts, families keeping a household safe online. No jargon and no scare tactics: what the attacks look like, and the few habits that stop most of them. Field notes for fellow practitioners live here too, clearly marked.</p>
+          <p class="lede">Plain-English cybersecurity for the people attackers actually target — seniors answering scam calls, youngsters setting up their first accounts, families keeping a household safe online. No jargon and no scare tactics: what the attacks look like, and the few habits that stop most of them. For fellow practitioners, the technical field notes live on their own page — the Field Notes tab above.</p>
           <div class="creds">
             <span class="label">Certified</span>
             <span class="chip"><b>CISA</b> ISACA</span>
@@ -371,16 +375,14 @@
         <section class="block" id="writing">
           <div class="section-head">
             <h2>Writing</h2>
-            <span class="note">two shelves — start with the first</span>
+            <span class="note">start here</span>
           </div>
           <h3 class="shelf-title first">Explained Simply — for everyone</h3>
           <p class="shelf-intro">Plain-English lessons on the scam calls, passwords, updates and habits that decide whether a household stays safe online. Written for seniors, youngsters and families — start here.</p>
           <div id="featured-slot"></div>
           <div style="height:22px"></div>
           <div class="grid" id="post-grid"></div>
-          <h3 class="shelf-title">Field Notes — for fellow practitioners</h3>
-          <p class="shelf-intro">My professional notebook: GRC engineering and security automation, written for people who do this work.</p>
-          <div class="grid" id="field-grid"></div>
+          <p class="shelf-intro" style="margin-top:36px">Fellow practitioners: my technical notebook — GRC engineering and security automation — has its own page: <a href="#field-notes"><strong>Field Notes &#8594;</strong></a></p>
         </section>
 
         <section class="block" id="topics">
@@ -394,14 +396,6 @@
             <span><i>03</i>Family passwords &amp; accounts</span>
             <span><i>04</i>Youngsters online</span>
             <span><i>05</i>Updates, backups &amp; the basics</span>
-            <span><i>06</i>Security automation</span>
-            <span><i>07</i>GRC engineering</span>
-            <span><i>08</i>PowerShell &amp; Python for defenders</span>
-            <span><i>09</i>Continuous compliance</span>
-            <span><i>10</i>Evidence pipelines</span>
-            <span><i>11</i>Vulnerability data wrangling</span>
-            <span><i>12</i>Audit readiness</span>
-            <span><i>13</i>AI-assisted security ops</span>
           </div>
         </section>
 
@@ -469,6 +463,37 @@
           <p>© 2026 Suraj Padmakaran. All views are the author’s own.</p>
         </div>
       </footer>
+    </div>
+
+    <div id="field-view">
+      <div class="wrap">
+        <div class="article-hero">
+          <a class="back-link" href="#" id="field-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            All writing
+          </a>
+          <div class="kicker">Field Notes</div>
+          <h1>For fellow practitioners.</h1>
+          <p class="standfirst">My professional notebook: GRC engineering and security automation, written for people who do this work. The plain-English lessons for everyone else live on the home page.</p>
+        </div>
+        <div class="grid" id="field-grid" style="margin-bottom:54px"></div>
+        <section class="block">
+          <div class="section-head">
+            <h2>What the field notes cover</h2>
+            <span class="note">the recurring themes</span>
+          </div>
+          <div class="topics">
+            <span><i>01</i>Security automation</span>
+            <span><i>02</i>GRC engineering</span>
+            <span><i>03</i>PowerShell &amp; Python for defenders</span>
+            <span><i>04</i>Continuous compliance</span>
+            <span><i>05</i>Evidence pipelines</span>
+            <span><i>06</i>Vulnerability data wrangling</span>
+            <span><i>07</i>Audit readiness</span>
+            <span><i>08</i>AI-assisted security ops</span>
+          </div>
+        </section>
+      </div>
     </div>
 
     <div id="article-view">
@@ -669,6 +694,7 @@
       var grid = document.getElementById("post-grid");
       var featuredSlot = document.getElementById("featured-slot");
       var fieldGrid = document.getElementById("field-grid");
+      var lastList = "home";
       var arrowSvg = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>';
 
       function metaHtml(p) {
@@ -721,6 +747,8 @@
         for (var i = 0; i < POSTS.length; i++) if (POSTS[i].slug === slug) idx = i;
         if (idx < 0) { closePost(); return; }
         var p = POSTS[idx];
+        lastList = p.kicker === "Explained Simply" ? "home" : "field";
+        document.body.classList.remove("fieldnotes");
         document.getElementById("art-kicker").textContent = p.kicker;
         document.getElementById("art-title").textContent = p.title;
         document.getElementById("art-standfirst").textContent = p.standfirst;
@@ -741,17 +769,31 @@
 
       function closePost() {
         document.body.classList.remove("reading");
-        document.title = "Suraj Padmakaran — Cybersecurity, Automated";
+        document.body.classList.remove("fieldnotes");
+        document.title = "Suraj Padmakaran — Cybersecurity, Explained for Everyone";
+        window.scrollTo(0, 0);
+      }
+
+      function showField() {
+        document.body.classList.remove("reading");
+        document.body.classList.add("fieldnotes");
+        document.title = "Field Notes — Suraj Padmakaran";
         window.scrollTo(0, 0);
       }
 
       function route() {
         var h = location.hash || "";
         if (h.indexOf("#post/") === 0) openPost(h.slice(6));
-        else if (document.body.classList.contains("reading")) closePost();
+        else if (h === "#field-notes") showField();
+        else if (document.body.classList.contains("reading") || document.body.classList.contains("fieldnotes")) closePost();
       }
 
       document.getElementById("back-home").addEventListener("click", function (e) {
+        e.preventDefault();
+        if (lastList === "field") { location.hash = "field-notes"; }
+        else { history.pushState(null, "", location.pathname + location.search); closePost(); }
+      });
+      document.getElementById("field-back").addEventListener("click", function (e) {
         e.preventDefault(); history.pushState(null, "", location.pathname + location.search); closePost();
       });
       document.getElementById("brand-home").addEventListener("click", function (e) {
@@ -760,7 +802,7 @@
       var navLinks = document.querySelectorAll("[data-nav]");
       for (var n = 0; n < navLinks.length; n++) {
         navLinks[n].addEventListener("click", function () {
-          if (document.body.classList.contains("reading")) {
+          if (document.body.classList.contains("reading") || document.body.classList.contains("fieldnotes")) {
             history.pushState(null, "", location.pathname + location.search);
             closePost();
           }
