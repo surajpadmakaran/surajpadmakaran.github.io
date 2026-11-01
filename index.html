@@ -273,6 +273,11 @@
         font-family: "Newsreader", Georgia, serif; font-size: 21px; font-style: italic; color: var(--ink-2); line-height: 1.5;
       }
       .prose .signoff { color: var(--ink-2); font-size: 16px; border-top: 1px solid var(--line); padding-top: 20px; margin-top: 36px; }
+      .brand-block { display: flex; gap: 14px; align-items: flex-start; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 24px; }
+      .brand-block .bb-mark { font-family: "IBM Plex Mono", monospace; font-weight: 700; font-size: 14px; color: var(--accent-bright); border: 1px solid var(--accent-bright); border-radius: 8px; padding: 6px 8px; background: var(--surface); }
+      .brand-block .bb-name { font-family: "Newsreader", Georgia, serif; font-size: 22px; line-height: 1.2; color: var(--ink); }
+      .brand-block .bb-line { color: var(--ink-2); font-size: 15.5px; margin: 5px 0 9px; }
+      .brand-block a { color: var(--accent-bright); font-weight: 600; font-size: 15px; }
       .prevnext { max-width: 760px; margin-top: 34px; display: flex; justify-content: space-between; gap: 16px; }
       .prevnext a {
         font-weight: 600; font-size: 15px; border: 1px solid var(--line); background: var(--surface);
@@ -370,7 +375,7 @@
       <div class="wrap site-inner">
         <a class="brand" href="#" id="brand-home">
           <span class="mark">SP</span>
-          <span class="name">Simply Explained by Suraj</span>
+          <span class="name">SafeGrade</span>
         </a>
         <nav class="main">
           <a href="#writing" data-nav>Writing</a>
@@ -513,8 +518,8 @@
         <footer class="site">
         <div class="wrap foot-inner">
           <div>
-            <span class="fname">Suraj Padmakaran</span>
-            <p>Cybersecurity, explained for everyone. Plain-English safety writing for seniors, youngsters and families — plus field notes for practitioners.</p>
+            <span class="fname">Simply Explained by Suraj</span>
+            <p>Cybersecurity, explained for everyone. Plain-English safety writing for seniors, youngsters and families — plus field notes for practitioners. A SafeGrade project.</p>
           </div>
           <div class="fnav">
             <a href="#writing" data-nav>Writing</a>
@@ -574,6 +579,14 @@
         </div>
         <div class="article-img"><img id="art-img" src="data:image/webp;base64,UklGRlIFAABXRUJQVlA4IEYFAADQHQCdASr8AI4APxGEulcsKCWjpZKZaYAiCWNu16VbjwWVt4gTDYFJ+l5fG7aT133hmfgVwA03R/+Lv9XjXfs9+zai+ojn/27/jq7QOoDvdlWMLdOWbwDivd3d3d3d3d59Fq93d3d3d6zoSi1e7u7u7vWbgAUre+sQ9ZZF6MrinEq3La5LQwUumREvxlnqhkknU4N4SdCOBobMOrFamh0AXoPpompUBHNFDOvsKwapDqS9rJ/MpQL90Kqtna/yZtbgVDqI6keqcCcahrJNmTVmuqW0IY7DUumMHyT7H31rqK0acyA3XYQsX4pWiIiIiIiIiIiIiIgQAP79i6mVdDO4hPyNlT/ceZPxCJgEDIbm2IF9qAASjBplg0NFpvnYfEnqyndyP4Oa/OYkDeh4Ewf34+R6SzbxJ4W/p/hqQQKR5wz2yD8VmxMkiNIjB7i5ec2R0ktJmjqzQFyfKQoYjAwP0LvEAfCuZ1/UYK73inbXDivB6NgAQUGj3X/RoZOTmohdeL//2tfi8wYZl9pWBZlZKiF+9mWLrACgYy+eKhejoKY8Wobeg5BdGT3KfVLeegTRARl+pHHQ7W6r1bKpiFyu4+wvWNc50g1zlDTkIkre1P5bt8hszb1JaMuG7F47TJaiJrvWLWAtVwxMbIRSwEDo/o+hb57XSZpshJPbhwz3A1G9ECHXuk3N44jsQsgahV//a27C/jcCuC2sF+Oj3LrD6+o9SkICZkrkGT3t/P0T9hcAMBqdmrashPmmHDrFjf8HA+IDguVzUmW+sNwEIXkJG9rBgIpjEVt5TcttZPNTNqJi7Ih3qNards9+aGYj+Zs4Jn337q3HLduRy+9jjpdl/M80AcDoycqKmdHG2B4ezdF6iI55aqSeFQ3PjriS7q4RZB1JZsmBOb/NxZbtCME5rmkdZr3RT2q8xhvHPcJ1DD9ctbDQ0V1jXwSJ+Rz6D4ssjzLoeLbqtyxitVwqxfRUvLOZlibCFA6O7KA5Ril7i+XutMVS+4As8E9AwJTNzC/tQe5zWtghMZY7cgZejregUVm+w5DnIabP3gORFdMo84V2O2JTAD4lu/pYKl5XeCRh6VP/uylW7xMzPa8WQmAqinOHvZxLmV14/Ox7kzaaUjg29B7T9sP2AWVFweb/eppqmBSnBrp39CIMyb5MddxtomJeX1HsGQ+M/BNQSGgraVCZkyvCWkQdxBxZ95RKG9Gkp8EC0fimV2wGBb2vEgWzSnfMQZSEGWyanj3p4sFhYS2kpJqK37qzA4ne9WFmaFbXVF4B78M8tP9hdz2viF9c0gRj9ylKHD8mxS3k01ds87zqHT6FjIgTAKQC6xSiS/XXQ1qQv2QUjoF92kyUnuUYUELFJt1CSUx0a+UQQwyVJbKw5YoC4z3g2OxEq0BAKzWSZhVG4parAPtLGMd8QmgqKoRifrBxRABiIyaa8LgmHUtFI5s8XJtRvFqtGfl1h9Tr4BdQ0dAztHZ/Y2BDIq6lzQQMQ+PwOW96Y4k1kgl+8gYhgODrBVT5hHEfUgWXkxk8a0L31Yaru2RJ3ivx76hROrzuj5fe6c2deJF0DnQj5Wg3jXk5wjbWOySv5uhBn4M1sWAM0tvivpw6tJA93HDSGcit0+pMHSfMGC+lgX3ws36d975J69OMQqrB3/sczDPYp+sg//tbeuJ4fDwrazaMwv5JlN5/5LRM2OI+oB0E5Qq+mMycNwawPfVy3n1ryn+peJ3mXjrovGXHA0XnD2kbI8BwPhs+J0LUx9D011FZ4LlukaZrJZwAAAAAAAAAAAAAAAAAAAA=" alt="Article illustration" /></div>
         <article class="prose" id="art-body"></article>
+        <div class="brand-block">
+          <span class="bb-mark">SP</span>
+          <div>
+            <div class="bb-name">Simply Explained by Suraj</div>
+            <div class="bb-line">A SafeGrade project — cybersecurity, explained simply. A new chapter every Wednesday.</div>
+            <a href="https://buttondown.com/surajpadmakaran" target="_blank" rel="noopener">Subscribe for the next chapter →</a>
+          </div>
+        </div>
         <div class="prevnext" id="prevnext"></div>
         <div style="height:70px"></div>
       </div>
