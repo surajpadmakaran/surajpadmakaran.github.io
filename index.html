@@ -330,7 +330,9 @@
 
       .embeddable-buttondown-form { display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; max-width: 430px; padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
       .embeddable-buttondown-form label { font-weight: 600; font-size: 18px; color: var(--ink); }
-      .embeddable-buttondown-form input[type="email"] { box-sizing: border-box; width: 100%; padding: 13px 14px; border: 1px solid var(--line); border-radius: 8px; background: #ffffff; color: var(--ink); font: inherit; font-size: 19px; }
+      .embeddable-buttondown-form input[type="email"] { box-sizing: border-box; width: 100%; padding: 13px 14px; border: 1px solid var(--line); border-radius: 8px; background: #ffffff; color: #14202c; caret-color: #14202c; font: inherit; font-size: 19px; color-scheme: light; }
+      .embeddable-buttondown-form input[type="email"]::placeholder { color: #5b6b7a; opacity: 1; }
+      .embeddable-buttondown-form input[type="email"]:-webkit-autofill { -webkit-text-fill-color: #14202c; caret-color: #14202c; }
       .embeddable-buttondown-form input[type="submit"] { padding: 14px 20px; border: 0; border-radius: 999px; background: var(--accent); color: #ffffff; font: inherit; font-size: 18px; font-weight: 600; cursor: pointer; }
       .embeddable-buttondown-form input[type="submit"]:hover { background: var(--accent-bright); }
       .embeddable-buttondown-form p { margin: 0; font-size: 13.5px; text-align: center; }
