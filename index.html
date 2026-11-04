@@ -86,6 +86,9 @@
       nav.main { display: flex; gap: 26px; }
       nav.main a { color: var(--ink-2); font-size: 15px; font-weight: 500; }
       nav.main a:hover { color: var(--ink); text-decoration: none; }
+      .site-nav { display: flex; align-items: center; gap: 26px; }
+      .sub-link { color: var(--ink-2); font-size: 15px; font-weight: 500; }
+      .sub-link:hover { color: var(--ink); text-decoration: none; }
 
       /* ---------- hero ---------- */
       .hero { padding: 72px 0 8px; }
@@ -357,6 +360,27 @@
       .prose .guide-offer a { color: var(--accent); font-weight: 600; }
       @media (max-width: 900px) { .guide-grid { grid-template-columns: 1fr 1fr; } }
       @media (max-width: 620px) { .guide-grid { grid-template-columns: 1fr; } }
+
+      /* ——— Header C (owner-approved Nov 3, 2026): two-row mobile masthead — Subscribe pill on row 1, quiet links on row 2 ——— */
+      @media (max-width: 720px) {
+        .site-inner { flex-wrap: wrap; height: auto; padding-top: 10px; }
+        .site-nav { display: contents; }
+        .brand { order: 1; }
+        .sub-link {
+          order: 2; margin-left: auto;
+          background: var(--accent-bright); color: #14202c;
+          font-size: 14.5px; font-weight: 600;
+          padding: 8px 18px; border-radius: 999px;
+        }
+        .sub-link:hover { color: #14202c; text-decoration: none; }
+        nav.main {
+          order: 3; flex-basis: 100%;
+          justify-content: space-between; gap: 18px;
+          border-top: 1px solid var(--line);
+          margin-top: 10px; padding: 11px 0 13px;
+        }
+        nav.main a.hide-sm { display: none; }
+      }
     </style>
     <script type="application/ld+json">
     {
@@ -397,13 +421,15 @@
           <img class="mark" src="data:image/webp;base64,UklGRpoCAABXRUJQVlA4II4CAAAQDgCdASpgAGAAPxF+t1YsJ6UjpXVbeYAiCWUA0rAJhZ3mmq5e6t0Bz45qr6P2sN/+SVMUBUgAFuSBhGr2HjHi8na2BOBi2b0d0iyRQ7A1jsGcOo11YAv9e8IjYkDs4g9McVK8yRj6lrAvOkLlgtXzlzFfYXPTaVUAAP7wxAuU25a6lwCqvVhvNSkefM41LUQF0iHnFD5NTI5oAP5EX9ohPlv6iRv1mjJ08CNagwDfzTuwoZ/XNwyqyah/kDFHNFHvHrB4DpC5iQVG+utJf43X+gkbCte5vuJe81n6vFyF0mNzIuxHpGbRJ59vI8zYD+KGvYZGU0aen/4IO8/XrYX72BGYJdwHccZTcvUwDn+xd1vcRzZb7x3WufIkhooBaWxzHtC3gvhq0nswEzxspbixOUxiXgk0/Mim6ZxaqC1P7I0v/ALyykQe7jsVhAs3jDV2PZWNpNx7x0vnNVzd9no7GRHmL+AYUptGDgmW8RqOM4b6Z8k4/HW/GUShv2owRi4J53j+QNeu6rFcqcUJ0GM8wUe5hDUf8EcQG2MXziwJuZsABSpfy9LftroSnuwjco2VzAR4jWTOg1GQpwS1Of/Buzv3MGzOSYjfjaLYSZt75zuUoz0K1CSsyhP9NWMRsuSnftbzdI9Vs1hPicLK32zZ1DlFYTDwFpx1ki8/8ygwrFOEl6XA3+Sv7DEe+RIZ4S62RGwTrm9gWg8RAjCQW5t6YBIf35GCWkqH/5txOIvhHvit8F/igtA9RdrSXDwd5fOg9MyAOxMB+yDR6Z/K97PiLx4xcnxPXwo/RHbhFe1uGCD2qx+Zs4CJxedEsiGV0GimAqmMeZsVUTxIVC90fHcfX7UFeZe65NhUDOoAAAA=" alt="SafeGrade logo" width="34" height="34" />
           <span class="name">SafeGrade</span>
         </a>
-        <nav class="main">
-          <a href="#writing" data-nav>Writing</a>
-          <a href="#field-notes" id="nav-field">Field Notes</a>
-          <a href="#topics" data-nav class="hide-sm">Topics</a>
-          <a href="#about" data-nav>About</a>
-          <a href="#subscribe" data-nav>Subscribe</a>
-        </nav>
+        <div class="site-nav">
+          <nav class="main">
+            <a href="#writing" data-nav>Writing</a>
+            <a href="#field-notes" id="nav-field">Field Notes</a>
+            <a href="#topics" data-nav class="hide-sm">Topics</a>
+            <a href="#about" data-nav>About</a>
+          </nav>
+          <a class="sub-link" href="#subscribe" data-nav>Subscribe</a>
+        </div>
       </div>
     </header>
 
