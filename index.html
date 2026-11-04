@@ -77,6 +77,8 @@
       }
       .site-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 62px; }
       .brand { display: flex; align-items: baseline; gap: 10px; color: var(--ink); }
+      .brand .mark-link { display: block; line-height: 0; align-self: center; }
+      .brand .name-link { color: var(--ink); text-decoration: none; }
       .brand:hover { text-decoration: none; }
       .brand .mark {
         width: 34px; height: 34px; border-radius: 8px; object-fit: cover;
@@ -417,10 +419,10 @@
 
     <header class="site">
       <div class="wrap site-inner">
-        <a class="brand" href="#" id="brand-home">
-          <img class="mark" src="data:image/webp;base64,UklGRpoCAABXRUJQVlA4II4CAAAQDgCdASpgAGAAPxF+t1YsJ6UjpXVbeYAiCWUA0rAJhZ3mmq5e6t0Bz45qr6P2sN/+SVMUBUgAFuSBhGr2HjHi8na2BOBi2b0d0iyRQ7A1jsGcOo11YAv9e8IjYkDs4g9McVK8yRj6lrAvOkLlgtXzlzFfYXPTaVUAAP7wxAuU25a6lwCqvVhvNSkefM41LUQF0iHnFD5NTI5oAP5EX9ohPlv6iRv1mjJ08CNagwDfzTuwoZ/XNwyqyah/kDFHNFHvHrB4DpC5iQVG+utJf43X+gkbCte5vuJe81n6vFyF0mNzIuxHpGbRJ59vI8zYD+KGvYZGU0aen/4IO8/XrYX72BGYJdwHccZTcvUwDn+xd1vcRzZb7x3WufIkhooBaWxzHtC3gvhq0nswEzxspbixOUxiXgk0/Mim6ZxaqC1P7I0v/ALyykQe7jsVhAs3jDV2PZWNpNx7x0vnNVzd9no7GRHmL+AYUptGDgmW8RqOM4b6Z8k4/HW/GUShv2owRi4J53j+QNeu6rFcqcUJ0GM8wUe5hDUf8EcQG2MXziwJuZsABSpfy9LftroSnuwjco2VzAR4jWTOg1GQpwS1Of/Buzv3MGzOSYjfjaLYSZt75zuUoz0K1CSsyhP9NWMRsuSnftbzdI9Vs1hPicLK32zZ1DlFYTDwFpx1ki8/8ygwrFOEl6XA3+Sv7DEe+RIZ4S62RGwTrm9gWg8RAjCQW5t6YBIf35GCWkqH/5txOIvhHvit8F/igtA9RdrSXDwd5fOg9MyAOxMB+yDR6Z/K97PiLx4xcnxPXwo/RHbhFe1uGCD2qx+Zs4CJxedEsiGV0GimAqmMeZsVUTxIVC90fHcfX7UFeZe65NhUDOoAAAA=" alt="SafeGrade logo" width="34" height="34" />
-          <span class="name">SafeGrade</span>
-        </a>
+        <div class="brand">
+          <a class="mark-link" href="http://safegradecompliance.com" aria-label="SafeGrade website — safegradecompliance.com"><img class="mark" src="data:image/webp;base64,UklGRpoCAABXRUJQVlA4II4CAAAQDgCdASpgAGAAPxF+t1YsJ6UjpXVbeYAiCWUA0rAJhZ3mmq5e6t0Bz45qr6P2sN/+SVMUBUgAFuSBhGr2HjHi8na2BOBi2b0d0iyRQ7A1jsGcOo11YAv9e8IjYkDs4g9McVK8yRj6lrAvOkLlgtXzlzFfYXPTaVUAAP7wxAuU25a6lwCqvVhvNSkefM41LUQF0iHnFD5NTI5oAP5EX9ohPlv6iRv1mjJ08CNagwDfzTuwoZ/XNwyqyah/kDFHNFHvHrB4DpC5iQVG+utJf43X+gkbCte5vuJe81n6vFyF0mNzIuxHpGbRJ59vI8zYD+KGvYZGU0aen/4IO8/XrYX72BGYJdwHccZTcvUwDn+xd1vcRzZb7x3WufIkhooBaWxzHtC3gvhq0nswEzxspbixOUxiXgk0/Mim6ZxaqC1P7I0v/ALyykQe7jsVhAs3jDV2PZWNpNx7x0vnNVzd9no7GRHmL+AYUptGDgmW8RqOM4b6Z8k4/HW/GUShv2owRi4J53j+QNeu6rFcqcUJ0GM8wUe5hDUf8EcQG2MXziwJuZsABSpfy9LftroSnuwjco2VzAR4jWTOg1GQpwS1Of/Buzv3MGzOSYjfjaLYSZt75zuUoz0K1CSsyhP9NWMRsuSnftbzdI9Vs1hPicLK32zZ1DlFYTDwFpx1ki8/8ygwrFOEl6XA3+Sv7DEe+RIZ4S62RGwTrm9gWg8RAjCQW5t6YBIf35GCWkqH/5txOIvhHvit8F/igtA9RdrSXDwd5fOg9MyAOxMB+yDR6Z/K97PiLx4xcnxPXwo/RHbhFe1uGCD2qx+Zs4CJxedEsiGV0GimAqmMeZsVUTxIVC90fHcfX7UFeZe65NhUDOoAAAA=" alt="SafeGrade logo" width="34" height="34" /></a>
+          <a class="name-link" href="#" id="brand-home"><span class="name">SafeGrade</span></a>
+        </div>
         <div class="site-nav">
           <nav class="main">
             <a href="#writing" data-nav>Writing</a>
