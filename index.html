@@ -264,6 +264,9 @@
       #field-view { display: none; }
       body.fieldnotes #home-view { display: none; }
       body.fieldnotes #field-view { display: block; }
+      #videos-view { display: none; }
+      body.videos #home-view { display: none; }
+      body.videos #videos-view { display: block; }
       .progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); width: 0; z-index: 60; }
       .article-hero { padding: 48px 0 0; max-width: 760px; }
       .back-link { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-size: 15px; margin-bottom: 30px; }
@@ -460,6 +463,7 @@
           <nav class="main">
             <a href="#writing" data-nav>Writing</a>
             <a href="#field-notes" id="nav-field">Field Notes</a>
+            <a href="#videos-view" id="nav-videos">Short Videos</a>
             <a href="#topics" data-nav class="hide-sm">Topics</a>
             <a href="#about" data-nav>About</a>
           </nav>
@@ -688,6 +692,27 @@
             <span><i>08</i>AI-assisted security ops</span>
           </div>
         </section>
+      </div>
+    </div>
+
+    <div id="videos-view">
+      <div class="wrap">
+        <div class="article-hero">
+          <a class="back-link" href="#" id="videos-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            All writing
+          </a>
+          <div class="kicker">Short Videos</div>
+          <h1>Short educational videos.</h1>
+          <p class="standfirst">short · plain English · free to share — short videos that show the scam and the one move that stops it. Press play: no account, no sign-up. Every lesson under a minute, and new videos arrive with new chapters.</p>
+        </div>
+        <div class="video-shelf" style="margin-bottom:54px">
+          <figure class="video-card"><video controls preload="metadata" poster="assets/videos/charity-appeal.jpg" src="assets/videos/charity-appeal.mp4"></video><figcaption><b>The Appeal That Isn’t the Charity</b><span>Sound-alike charity names, faked caller ID, and the prize you never pay for.</span></figcaption></figure>
+          <figure class="video-card"><video controls preload="metadata" poster="assets/videos/search-ad.jpg" src="assets/videos/search-ad.mp4"></video><figcaption><b>The First Result Isn’t the Company</b><span>The top search result can be an ad bought by an impersonator — check before you trust it.</span></figcaption></figure>
+          <figure class="video-card"><video controls preload="metadata" poster="assets/videos/the-warning-list-updates.jpg" src="assets/videos/the-warning-list-updates.mp4"></video><figcaption><b>The Warning List Arrives Late</b><span>Turn on automatic updates · 45 seconds · from the chapter of the same name</span></figcaption></figure>
+          <figure class="video-card"><video controls preload="metadata" poster="assets/videos/voice-clone-code-word.jpg" src="assets/videos/voice-clone-code-word.mp4"></video><figcaption><b>The Voice-Clone Call</b><span>The family code word that stops it · 21 seconds · from The Call That Isn’t Your Bank</span></figcaption></figure>
+          <figure class="video-card"><video controls preload="metadata" poster="assets/videos/delivery-text.jpg" src="assets/videos/delivery-text.mp4"></video><figcaption><b>The Delivery Text</b><span>The redelivery fee is a scam · 18 seconds · from today’s new chapter</span></figcaption></figure>
+        </div>
       </div>
     </div>
 
@@ -983,6 +1008,7 @@
         var p = POSTS[idx];
         lastList = p.kicker === "Explained Simply" ? "home" : "field";
         document.body.classList.remove("fieldnotes");
+        document.body.classList.remove("videos");
         document.getElementById("art-kicker").textContent = p.kicker;
         document.getElementById("art-title").textContent = p.title;
         document.getElementById("art-standfirst").textContent = p.standfirst;
@@ -1004,14 +1030,24 @@
       function closePost() {
         document.body.classList.remove("reading");
         document.body.classList.remove("fieldnotes");
+        document.body.classList.remove("videos");
         document.title = "Suraj Padmakaran — Cybersecurity, Explained for Everyone";
         window.scrollTo(0, 0);
       }
 
       function showField() {
         document.body.classList.remove("reading");
+        document.body.classList.remove("videos");
         document.body.classList.add("fieldnotes");
         document.title = "Field Notes — Suraj Padmakaran";
+        window.scrollTo(0, 0);
+      }
+
+      function showVideos() {
+        document.body.classList.remove("reading");
+        document.body.classList.remove("fieldnotes");
+        document.body.classList.add("videos");
+        document.title = "Short Videos — Suraj Padmakaran";
         window.scrollTo(0, 0);
       }
 
@@ -1019,7 +1055,8 @@
         var h = location.hash || "";
         if (h.indexOf("#post/") === 0) openPost(h.slice(6));
         else if (h === "#field-notes") showField();
-        else if (document.body.classList.contains("reading") || document.body.classList.contains("fieldnotes")) closePost();
+        else if (h === "#videos-view") showVideos();
+        else if (document.body.classList.contains("reading") || document.body.classList.contains("fieldnotes") || document.body.classList.contains("videos")) closePost();
       }
 
       document.getElementById("back-home").addEventListener("click", function (e) {
@@ -1030,13 +1067,16 @@
       document.getElementById("field-back").addEventListener("click", function (e) {
         e.preventDefault(); history.pushState(null, "", location.pathname + location.search); closePost();
       });
+      document.getElementById("videos-back").addEventListener("click", function (e) {
+        e.preventDefault(); history.pushState(null, "", location.pathname + location.search); closePost();
+      });
       document.getElementById("brand-home").addEventListener("click", function (e) {
         e.preventDefault(); history.pushState(null, "", location.pathname + location.search); closePost();
       });
       var navLinks = document.querySelectorAll("[data-nav]");
       for (var n = 0; n < navLinks.length; n++) {
         navLinks[n].addEventListener("click", function () {
-          if (document.body.classList.contains("reading") || document.body.classList.contains("fieldnotes")) {
+          if (document.body.classList.contains("reading") || document.body.classList.contains("fieldnotes") || document.body.classList.contains("videos")) {
             history.pushState(null, "", location.pathname + location.search);
             closePost();
           }
