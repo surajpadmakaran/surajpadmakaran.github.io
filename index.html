@@ -183,6 +183,7 @@
       .featured p { color: var(--ink-2); margin: 0 0 20px; font-size: 16.5px; }
       .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--ink-3); margin-top: auto; }
       .read-link { margin-top: 18px; font-weight: 600; font-size: 15px; color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
+      a.read-link:hover { text-decoration: none; }
       .read-link svg { transition: transform .18s ease; }
       .featured:hover .read-link svg, .card:hover .read-link svg { transform: translateX(3px); }
 
@@ -973,7 +974,7 @@
               '<div class="kicker">' + f.kicker + " · Latest</div>" +
               "<h3>" + f.title + "</h3>" +
               "<p>" + f.standfirst + "</p>" +
-              '<span class="read-link">Read the post ' + arrowSvg + "</span>" +
+              '<a class="read-link" href="/posts/' + f.slug + '/">Read the post ' + arrowSvg + "</a>" +
               '<div class="meta" style="margin-top:16px">' + metaHtml(f) + "</div>" +
             "</div>" +
           "</article>";
@@ -985,7 +986,7 @@
               '<div class="kicker">' + p.kicker + "</div>" +
               "<h3>" + p.title + "</h3>" +
               "<p>" + p.standfirst + "</p>" +
-              '<span class="read-link">Read ' + arrowSvg + "</span>" +
+              '<a class="read-link" href="/posts/' + p.slug + '/">Read ' + arrowSvg + "</a>" +
               '<div class="meta" style="margin-top:14px">' + metaHtml(p) + "</div>" +
             "</div>" +
           "</article>";
@@ -997,7 +998,7 @@
         var clickables = document.querySelectorAll("[data-slug]");
         for (var i = 0; i < clickables.length; i++) {
           (function (el) {
-            el.addEventListener("click", function () { location.hash = "post/" + el.getAttribute("data-slug"); });
+            el.addEventListener("click", function (e) { e.preventDefault(); location.hash = "post/" + el.getAttribute("data-slug"); });
             el.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); location.hash = "post/" + el.getAttribute("data-slug"); } });
           })(clickables[i]);
         }

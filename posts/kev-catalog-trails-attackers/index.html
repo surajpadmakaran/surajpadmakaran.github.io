@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>The Warning List Arrives Late. Don&#x27;t Wait for It. — Simply Explained by Suraj</title>
+    <meta name="description" content="The US government keeps a list of software flaws that criminals are confirmed to be using. In October, attackers moved on one flaw within two hours — and the official list caught up eight days later. That gap is not just a problem for IT departments. It lives in every phone and laptop at home." />
+    <link rel="canonical" href="https://surajpadmakaran.github.io/posts/kev-catalog-trails-attackers/" />
+    <meta property="og:title" content="The Warning List Arrives Late. Don&#x27;t Wait for It." />
+    <meta property="og:description" content="The US government keeps a list of software flaws that criminals are confirmed to be using. In October, attackers moved on one flaw within two hours — and the official list caught up eight days later. That gap is not just a problem for IT departments. It lives in every phone and laptop at home." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://surajpadmakaran.github.io/posts/kev-catalog-trails-attackers/" />
+    <meta property="og:image" content="https://surajpadmakaran.github.io/assets/chapters/kev-catalog-trails-attackers.webp" />
+    <meta property="og:image:alt" content="Footprints racing ahead on a dotted path, an amber warning flag planted far behind them beside a large clock" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="google-site-verification" content="JHg39EN6Q0Z2ERFFWdsvcEfnmvK2qFJT32i0jcmgyHM" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f6f8fa; --surface: #ffffff; --surface-2: #eef2f6;
+        --ink: #14202c; --ink-2: #43566a; --ink-3: #71859a;
+        --line: #dde5ec; --accent: #b45309; --accent-bright: #d97706;
+        --accent-soft: #fdf0dd; --radius: 14px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0c141d; --surface: #121f2c; --surface-2: #182836;
+          --ink: #e9eff6; --ink-2: #a9bccf; --ink-3: #748ba3;
+          --line: #22364a; --accent: #f0a832; --accent-bright: #fbbf24;
+          --accent-soft: #2b2110;
+        }
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+        font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      img { display: block; max-width: 100%; }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+      .masthead { border-bottom: 1px solid var(--line); background: var(--surface); }
+      .mast-in { display: flex; align-items: center; gap: 12px; padding-top: 14px; padding-bottom: 14px; }
+      .mast-in .mark { width: 34px; height: 34px; border-radius: 8px; }
+      .mast-in .lockup { display: flex; align-items: center; gap: 12px; color: var(--ink); }
+      .mast-in .lockup:hover { text-decoration: none; }
+      .mast-in .site-name { font-family: "Newsreader", Georgia, serif; font-size: 21px; font-weight: 600; line-height: 1.15; }
+      .mast-in .site-sub { display: block; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+      .mast-in .mast-sub { margin-left: auto; font-weight: 600; font-size: 15px; }
+      .article-hero { padding: 48px 0 0; max-width: 760px; }
+      .back-link { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-size: 15px; margin-bottom: 30px; }
+      .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+      .article-hero h1 { font-family: "Newsreader", Georgia, serif; font-size: clamp(34px, 5vw, 50px); line-height: 1.1; font-weight: 600; letter-spacing: -.015em; margin: 0 0 16px; }
+      .article-hero .standfirst { font-size: 20px; color: var(--ink-2); margin: 0 0 24px; line-height: 1.5; }
+      .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--ink-3); margin-bottom: 34px; }
+      .article-img { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); margin-bottom: 40px; max-width: 760px; }
+      .article-img img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
+      .prose { max-width: 760px; font-size: 18px; line-height: 1.75; color: var(--ink); padding-bottom: 8px; }
+      .prose p { margin: 0 0 22px; font-size: 20.5px; line-height: 1.8; }
+      .prose li { font-size: 20.5px; line-height: 1.75; }
+      .prose h2 { font-family: "Newsreader", Georgia, serif; font-size: 28px; font-weight: 600; letter-spacing: -.01em; margin: 40px 0 14px; line-height: 1.25; }
+      .prose ul { margin: 0 0 22px; padding-left: 22px; }
+      .prose li { margin-bottom: 9px; }
+      .prose strong { font-weight: 600; }
+      .prose code { font-family: "IBM Plex Mono", monospace; font-size: .86em; background: var(--surface-2); padding: 2px 6px; border-radius: 5px; }
+      .prose blockquote { border-left: 3px solid var(--accent-bright); margin: 0 0 22px; padding: 4px 0 4px 20px; color: var(--ink-2); }
+      .prose .signoff { color: var(--ink-2); font-size: 16px; border-top: 1px solid var(--line); padding-top: 20px; margin-top: 36px; }
+      .prose .guide-offer { background: var(--accent-soft); border: 1px solid var(--line); border-left: 3px solid var(--accent-bright); border-radius: 10px; padding: 18px 22px; color: var(--ink); margin-top: 30px; }
+      .prose .guide-offer a { color: var(--accent); font-weight: 600; }
+      .prose .disclaimer { font-size: 13.5px; color: var(--ink-3); margin-top: 18px; }
+      .prose .post-video { width: 100%; max-width: 340px; aspect-ratio: 9 / 16; object-fit: cover; display: block; margin: 22px auto 10px; border-radius: 12px; background: #16232f; }
+      .prose .video-note { text-align: center; color: var(--ink-3); font-size: 13.5px; margin: 0 0 8px; }
+      .prose .video-note p { font-size: 13.5px; }
+      .brand-block { display: flex; gap: 14px; align-items: flex-start; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 24px; max-width: 760px; }
+      .brand-block .bb-mark { width: 42px; height: 42px; border-radius: 9px; object-fit: cover; display: block; flex: none; }
+      .brand-block .bb-name { font-family: "Newsreader", Georgia, serif; font-size: 22px; line-height: 1.2; color: var(--ink); }
+      .brand-block .bb-line { color: var(--ink-2); font-size: 15.5px; margin: 5px 0 9px; }
+      .brand-block a { color: var(--accent-bright); font-weight: 600; font-size: 15px; }
+      .more { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 26px; max-width: 760px; }
+      .more h2 { font-family: "Newsreader", Georgia, serif; font-size: 24px; font-weight: 600; margin: 0 0 14px; }
+      .more ul { list-style: none; margin: 0 0 26px; padding: 0; }
+      .more li { margin-bottom: 10px; }
+      .more li span { color: var(--ink-3); font-size: 13.5px; font-family: "IBM Plex Mono", monospace; margin-left: 8px; }
+      .prevnext { display: flex; justify-content: space-between; gap: 18px; max-width: 760px; margin-bottom: 8px; }
+      .prevnext a { font-weight: 600; font-size: 15.5px; max-width: 48%; }
+      .prevnext a small { display: block; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 4px; }
+      .prevnext a.nx { text-align: right; margin-left: auto; }
+    </style>
+    <script data-goatcounter="https://surajpadmakaran.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="wrap mast-in">
+        <a class="lockup" href="/">
+          <img class="mark" src="/assets/safegrade-logo-256.png" alt="SafeGrade logo" width="34" height="34" />
+          <span><span class="site-name">Simply Explained by Suraj</span>
+          <span class="site-sub">A SafeGrade project</span></span>
+        </a>
+        <a class="mast-sub" href="/#subscribe">Subscribe</a>
+      </div>
+    </header>
+    <div class="wrap">
+      <div class="article-hero">
+        <a class="back-link" href="/">&larr; All writing</a>
+        <div class="kicker">Explained Simply</div>
+        <h1>The Warning List Arrives Late. Don&#x27;t Wait for It.</h1>
+        <p class="standfirst">The US government keeps a list of software flaws that criminals are confirmed to be using. In October, attackers moved on one flaw within two hours — and the official list caught up eight days later. That gap is not just a problem for IT departments. It lives in every phone and laptop at home.</p>
+        <div class="meta"><span>Oct 21, 2026</span><span>5 min read</span><span>Explained</span><span>By Suraj Padmakaran</span></div>
+      </div>
+      <div class="article-img"><img src="/assets/chapters/kev-catalog-trails-attackers.webp" alt="Footprints racing ahead on a dotted path, an amber warning flag planted far behind them beside a large clock" /></div>
+      <article class="prose">
+<p>There is a list in Washington that matters more than almost any other in cybersecurity. It is called the Known Exploited Vulnerabilities catalog — the KEV, for short — and it is the US government's register of software flaws that criminals are <em>confirmed</em> to be using in real attacks. When a flaw lands on it, federal agencies get a deadline to fix it, and much of the security industry treats the list as its starting gun.</p><p>In October, the list showed its one structural weakness: it is always, necessarily, late.</p><h2>Two hours versus eight days</h2><p>On the first days of October, a serious flaw (rated 9.3 out of 10) became public in a family of workplace tools made by Atlassian — the software many companies use to track projects and share documents. Criminals began probing for it within about <strong>two hours</strong> of the technical details appearing. By October 7, attacks using it were being reported in the wild.</p><p>CISA added it to the KEV on October 15.</p><p>The attackers needed two hours. The catalog took eight days. A second case the same month — flaws in Ahsay backup servers, the kind of software whose whole job is keeping your data safe — followed the same rhythm: exploitation reported October 8, listed October 14.</p><h2>The lateness is not a mistake</h2><p>It would be easy to blame the list, and wrong. The KEV is slow <em>on purpose</em>. The government adds a flaw only when it has solid proof that criminals are using it, plus clear instructions for fixing it. That care is exactly why the list can be trusted — and why it can never be an early-warning system. By construction, it confirms what has already happened.</p><p>Which means everyone waiting for it — companies waiting to patch, and all of us waiting to hear something is dangerous — is reacting to yesterday's news.</p><h2>Your home has the same gap</h2><p>You have never heard of the KEV, and you live inside its problem. Every warning about your phone, your laptop, your browser works the same way: a flaw is found, criminals start using it, a fix is built, and only then does the warning reach you. The fix for most home devices is the update you keep postponing.</p><p>That is the real lesson of the eight days. You cannot watch every warning, and you don't have to. You can set your house to protect itself:</p><ul><li><strong>Turn on automatic updates — everywhere.</strong> Phone, computer, browser, tablet, the apps on your TV. An update is the repair arriving on its own, without you needing to hear about the flaw at all. This single setting is the home version of everything the professionals struggle to do by hand.</li><li><strong>Restart when the device asks.</strong> Many repairs finish only when the machine restarts. 'Later' is where fixes go to wait.</li><li><strong>Retire what no longer gets updates.</strong> A phone or computer too old to receive them is a door that can no longer be locked. It does not have to be replaced today — but know which of your devices those are, and don't keep your banking on them.</li><li><strong>Be suspicious right after big tech news breaks.</strong> When a major flaw is in the headlines, fake 'urgent security update' texts and emails flood in, hoping you'll install the cure from a link. Real updates never arrive that way. They come from inside the device's own settings — go there yourself, never through a message.</li></ul><h2>If you run systems at work</h2><p>The professional version of this lesson is the one I have given my own field: don't wait for the official list to start. Watch the earlier signals — vendor warnings, researcher reports, exploitation trackers — score them, match them against what you actually run, and treat the KEV's arrival as confirmation you were right to move, not as the moment to start. Attackers don't wait for the catalog. Neither should a patching program.</p><h2>The takeaway</h2><p>Whether the system is a federal network or a family's kitchen-table laptop, the pattern is identical: the warning always trails the attack, and it always will. What separates the protected from the exposed is not faster news. It is whether the fix was already set to arrive on its own.</p><p>Turn on the updates. Then get on with your life.</p><h2>Watch: the two-hour head start</h2><p>Short on time? The whole chapter in 45 seconds:</p><video class='post-video' controls controlsList='nodownload' oncontextmenu='return false' preload='metadata' poster='/assets/videos/the-warning-list-updates.jpg' src='/assets/videos/the-warning-list-updates.mp4'></video><p class='video-note'>Simply Explained by Suraj · AI-generated voice, labelled on purpose · <a href='https://www.instagram.com/reel/DfU_7VPDoSz/' target='_blank' rel='noopener'>Watch & share on Instagram</a></p><p class='signoff'>— S.P. · Next up: find the task everyone silently suffers through.</p><p class='guide-offer'><strong>Free guides:</strong> the <em>Online Safety 101</em> guides are short, printable quick references for seniors, parents, teens and everyone — what to do in the moment a scam arrives, and who to call if it already happened. <a href='https://surajpadmakaran.github.io/#guides'>Subscribe and get a free guide</a> — pick the one your family needs.</p>
+      </article>
+      <div class="brand-block">
+        <img class="bb-mark" src="/assets/safegrade-logo-256.png" alt="SafeGrade logo" width="42" height="42" />
+        <div>
+          <div class="bb-name">Simply Explained by Suraj</div>
+          <div class="bb-line">A SafeGrade project · Cybersecurity, explained simply · A new chapter every Saturday</div>
+          <a href="https://buttondown.com/surajpadmakaran" target="_blank" rel="noopener">Subscribe for the next chapter &rarr;</a>
+        </div>
+      </div>
+      <nav class="more">
+        <div class="prevnext"><a href="/posts/ransomware-front-door/"><small>Newer post</small>Ransomware Still Walks In Through the Front Door</a><a class="nx" href="/posts/thirty-minutes-to-ninety-seconds/"><small>Older post</small>Find the Task Everyone Silently Suffers Through</a></div>
+        <h2>More chapters</h2>
+        <ul>
+<li><a href="/posts/usps-couldnt-deliver-your-package-text/">“USPS Couldn’t Deliver Your Package” Text? The Redelivery Fee Is a Scam</a><span>Nov 4, 2026 · Text-message scams</span></li>
+<li><a href="/posts/the-teammate-who-isnt-twelve/">The Teammate Who Isn&#x27;t Twelve</a><span>Nov 1, 2026 · Youngsters online</span></li>
+<li><a href="/posts/the-call-that-isnt-your-bank/">The Call That Isn&#x27;t Your Bank</a><span>Oct 30, 2026 · Scams</span></li>
+<li><a href="/posts/http2shell-brotli-flaw/">The Flaw Was Hiding in the Compression Library</a><span>Oct 30, 2026 · Explained</span></li>
+<li><a href="/posts/ransomware-front-door/">Ransomware Still Walks In Through the Front Door</a><span>Oct 28, 2026 · Explained</span></li>
+<li><a href="/posts/thirty-minutes-to-ninety-seconds/">Find the Task Everyone Silently Suffers Through</a><span>Oct 14, 2026 · Automation</span></li>
+<li><a href="/posts/poam-is-not-a-spreadsheet-graveyard/">Your POA&amp;M Is Not a Spreadsheet Graveyard</a><span>Oct 7, 2026 · GRC</span></li>
+<li><a href="/posts/script-before-you-buy/">Learn to Script Before You Learn to Buy Tools</a><span>Sep 30, 2026 · Career</span></li>
+<li><a href="/posts/evidence-is-a-pipeline/">Evidence Collection Is a Pipeline, Not a Fire Drill</a><span>Sep 23, 2026 · Compliance</span></li>
+        </ul>
+        <p><a href="/">Back to the homepage &rarr;</a></p>
+      </nav>
+      <div style="height:70px"></div>
+    </div>
+  </body>
+</html>
