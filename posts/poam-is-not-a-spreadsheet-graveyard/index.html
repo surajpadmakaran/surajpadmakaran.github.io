@@ -87,6 +87,7 @@
       .prevnext a { font-weight: 600; font-size: 15.5px; max-width: 48%; }
       .prevnext a small { display: block; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 4px; }
       .prevnext a.nx { text-align: right; margin-left: auto; }
+      .view-counter { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
     </style>
     <script data-goatcounter="https://surajpadmakaran.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </head>
@@ -107,7 +108,7 @@
         <div class="kicker">GRC Engineering</div>
         <h1>Your POA&amp;M Is Not a Spreadsheet Graveyard</h1>
         <p class="standfirst">Plans of Action &amp; Milestones die the same way everywhere: a workbook nobody trusts, updated in a panic before the auditor arrives. It doesn&#x27;t have to work that way.</p>
-        <div class="meta"><span>Oct 7, 2026</span><span>7 min read</span><span>GRC</span><span>By Suraj Padmakaran</span></div>
+        <div class="meta"><span>Oct 7, 2026</span><span>7 min read</span><span>GRC</span><span>By Suraj Padmakaran</span><span class="view-counter" data-view-counter="/posts/poam-is-not-a-spreadsheet-graveyard/" data-kind="views"></span></div>
       </div>
       <div class="article-img"><img src="/assets/chapters/poam-is-not-a-spreadsheet-graveyard.webp" alt="A tangled, unraveling spreadsheet grid resolving into clean, checked rows" /></div>
       <article class="prose">
@@ -139,5 +140,63 @@
       </nav>
       <div style="height:70px"></div>
     </div>
+    <script>
+      /* View/play counters (Nov 10, 2026): display counts come from
+         GoatCounter's public counter endpoint; video plays are recorded
+         with goatcounter.count(). Any element whose count cannot be
+         loaded is hidden, never faked. */
+      (function () {
+        function fmt(n) { return n.toLocaleString("en-US"); }
+        function fillCounters() {
+          var els = document.querySelectorAll("[data-view-counter]");
+          for (var i = 0; i < els.length; i++) {
+            (function (el) {
+              if (el.getAttribute("data-vc-done")) return;
+              el.setAttribute("data-vc-done", "1");
+              var path = el.getAttribute("data-view-counter");
+              var kind = el.getAttribute("data-kind") || "views";
+              var url = "https://surajpadmakaran.goatcounter.com/counter/" + encodeURIComponent(path) + ".json";
+              fetch(url).then(function (r) {
+                /* GoatCounter answers 404 with a JSON body of count 0 for
+                   paths nobody has viewed yet - that is a genuine zero,
+                   so the body is parsed whatever the status says. */
+                return r.json();
+              }).then(function (d) {
+                var n = parseInt(String(d && d.count).replace(/,/g, ""), 10);
+                if (isNaN(n)) throw new Error("counter");
+                el.textContent = fmt(n) + (kind === "plays" ? (n === 1 ? " play" : " plays") : (n === 1 ? " view" : " views"));
+              }).catch(function () { el.style.display = "none"; });
+            })(els[i]);
+          }
+        }
+        function wirePlays() {
+          var vids = document.querySelectorAll("video[data-video-id]");
+          for (var i = 0; i < vids.length; i++) {
+            (function (v) {
+              if (v.getAttribute("data-play-wired")) return;
+              v.setAttribute("data-play-wired", "1");
+              v.addEventListener("play", function () {
+                var id = v.getAttribute("data-video-id");
+                var key = "gc-played-" + id;
+                try {
+                  if (sessionStorage.getItem(key)) return;
+                  sessionStorage.setItem(key, "1");
+                } catch (e) { /* storage unavailable: still count this play */ }
+                var tries = 0;
+                (function fire() {
+                  if (window.goatcounter && window.goatcounter.count) {
+                    window.goatcounter.count({ path: "/watch/" + id, event: true });
+                  } else if (tries++ < 20) { setTimeout(fire, 250); }
+                })();
+              });
+            })(vids[i]);
+          }
+        }
+        function initCounters() { fillCounters(); wirePlays(); }
+        window.fillViewCounters = initCounters;
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initCounters);
+        else initCounters();
+      })();
+</script>
   </body>
 </html>
