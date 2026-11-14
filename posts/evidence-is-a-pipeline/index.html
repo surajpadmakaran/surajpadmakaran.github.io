@@ -88,6 +88,10 @@
       .prevnext a small { display: block; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 4px; }
       .prevnext a.nx { text-align: right; margin-left: auto; }
       .view-counter { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+      .mast-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 0 0 13px; font-size: 14.5px; font-weight: 500; }
+      .mast-nav a { color: var(--ink-2); }
+      .mast-nav a:hover { color: var(--accent); text-decoration: none; }
+      .mast-nav a.active { color: var(--accent); }
     </style>
     <script data-goatcounter="https://surajpadmakaran.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </head>
@@ -101,10 +105,11 @@
         </a>
         <a class="mast-sub" href="/#subscribe">Subscribe</a>
       </div>
+      <div class="wrap"><nav class="mast-nav"><a href="/">Home</a><a href="/for-seniors/">For Seniors</a><a href="/for-parents/">For Parents</a><a href="/for-teens/">For Teens</a><a href="/for-everyone/">For Everyone</a><a href="/field-notes/" class="active">Field Notes</a><a href="/videos/">Videos</a><a href="/about/">About</a></nav></div>
     </header>
     <div class="wrap">
       <div class="article-hero">
-        <a class="back-link" href="/">&larr; All writing</a>
+        <a class="back-link" href="/field-notes/">&larr; Field Notes</a>
         <div class="kicker">Continuous Compliance</div>
         <h1>Evidence Collection Is a Pipeline, Not a Fire Drill</h1>
         <p class="standfirst">If your audit evidence comes from screenshots taken the night before, you don&#x27;t have an evidence problem — you have an architecture problem. Here&#x27;s the fix.</p>
