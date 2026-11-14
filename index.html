@@ -417,6 +417,86 @@
         nav.main a.hide-sm { display: none; }
       }
     </style>
+    <style>
+      /* ============================================================
+         FIRST GLANCE v3 — OPENING RECOMPOSITION (live Nov 14, 2026).
+         Masthead + editor's letter + Saturday Letter card +
+         verified Scam Alert replace the navy hero at the top of
+         the home page. New CSS uses only the flipping tokens
+         (--ink, --ink-2, --surface, --line, --accent-soft, --accent).
+         ============================================================ */
+
+      /* the seal — the SafeGrade mark as a small navy-and-gold medallion */
+      .seal { display: inline-block; border-radius: 24%; border: 1px solid var(--accent); box-shadow: 0 4px 14px -6px rgba(10, 20, 30, .45); }
+      .seal-panel { width: 54px; height: 54px; flex: 0 0 auto; }
+      .seal-alert { width: 40px; height: 40px; flex: 0 0 auto; }
+
+      /* subscribe — an ivory membership card, not a banner */
+      .sub-band { margin: 44px 0 0; padding: 46px 48px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: inset 0 2px 0 var(--accent), var(--shadow); display: grid; grid-template-columns: 1fr 430px; gap: 46px; align-items: center; }
+      .panel-head { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+      .panel-head .kicker { margin-bottom: 6px; }
+      .sub-band h2 { font-family: "Newsreader", Georgia, serif; font-size: clamp(26px, 3vw, 31px); font-weight: 600; letter-spacing: -.01em; line-height: 1.15; margin: 0; color: var(--ink); }
+      .sub-band p { color: var(--ink-2); font-size: 16.5px; line-height: 1.7; margin: 0; max-width: 34em; }
+      .sub-band .embeddable-buttondown-form { max-width: none; }
+      @media (max-width: 900px) {
+        .sub-band { grid-template-columns: 1fr; padding: 32px 24px; gap: 26px; }
+      }
+
+      /* scam alert — a verified-alert card */
+      .alert-card { display: block; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-left: 2px solid var(--accent); border-radius: var(--radius); box-shadow: var(--shadow); padding: 36px 40px; }
+      .alert-card:hover { text-decoration: none; border-color: var(--line); border-left-color: var(--accent); }
+      .alert-top { display: flex; align-items: center; gap: 14px; }
+      .alert-tag { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+      .alert-card h3 { font-family: "Newsreader", Georgia, serif; font-size: clamp(24px, 2.8vw, 30px); line-height: 1.18; font-weight: 600; letter-spacing: -.01em; margin: 16px 0 10px; color: var(--ink); }
+      .alert-card p { color: var(--ink-2); font-size: 16.5px; line-height: 1.7; margin: 0 0 16px; max-width: 46em; }
+      .alert-src { display: block; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .06em; color: var(--ink-2); margin: 0 0 20px; }
+      .alert-foot { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 18px; }
+      .alert-go { font-weight: 600; font-size: 16px; color: var(--accent); }
+      .alert-meta { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--ink-2); }
+
+      @media (max-width: 720px) {
+        .alert-card { padding: 28px 24px; }
+      }
+
+      /* FIRST GLANCE v3 — recomposition of the opening. New CSS uses only
+         flipping tokens: --ink, --ink-2, --surface, --line, --accent-soft. */
+      .fg-masthead { text-align: center; padding: 40px 20px 26px; margin: 26px 0 0;
+        border-top: 3px double var(--line); border-bottom: 1px solid var(--line); }
+      .fg-mast-top { font-family: "IBM Plex Mono", monospace; font-size: 11px;
+        letter-spacing: .22em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 18px; }
+      .fg-seal { width: 58px; height: 58px; border-radius: 14px;
+        border: 1px solid var(--line); background: var(--surface); padding: 5px; }
+      .fg-name { font-family: "Newsreader", Georgia, serif; font-weight: 600;
+        font-size: clamp(42px, 9vw, 64px); line-height: 1.04; color: var(--ink); margin: 14px 0 4px; }
+      .fg-byline { font-family: "Newsreader", Georgia, serif; font-style: italic;
+        font-size: clamp(19px, 4.5vw, 24px); color: var(--ink-2); margin: 0 0 18px; }
+      .fg-facts { font-family: "IBM Plex Mono", monospace; font-size: 10.5px;
+        letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2);
+        margin: 0; line-height: 1.9; }
+      .fg-letter { display: grid; grid-template-columns: 236px 1fr; gap: 38px;
+        align-items: start; background: var(--surface); border: 1px solid var(--line);
+        border-radius: 14px; padding: 36px 40px; margin: 28px 0 10px; }
+      .fg-portrait { margin: 0; background: var(--accent-soft); padding: 10px 10px 12px;
+        border: 1px solid var(--line); border-radius: 6px; }
+      .fg-portrait img { display: block; width: 100%; height: auto; border-radius: 3px; }
+      .fg-portrait figcaption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px;
+        letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2);
+        text-align: center; margin-top: 10px; line-height: 1.7; }
+      .fg-dear { font-family: "Newsreader", Georgia, serif; font-style: italic;
+        font-size: 24px; color: var(--ink); margin: 2px 0 10px; }
+      .fg-promise { font-family: "Newsreader", Georgia, serif; font-size: 19px;
+        color: var(--ink); margin: 0 0 14px; }
+      .fg-letter-body p { font-size: 17px; line-height: 1.8; color: var(--ink); margin: 0 0 14px; }
+      .fg-sign { font-family: "Newsreader", Georgia, serif; font-style: italic;
+        font-size: 26px; color: var(--ink); margin: 20px 0 4px !important; }
+      .fg-creds { font-family: "IBM Plex Mono", monospace; font-size: 11px;
+        letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); margin: 0 !important; }
+      @media (max-width: 720px) {
+        .fg-masthead { padding: 30px 12px 22px; }
+        .fg-letter { grid-template-columns: 1fr; gap: 24px; padding: 26px 22px; }
+        .fg-portrait { max-width: 232px; margin: 0 auto; }
+      }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -475,14 +555,73 @@
 
     <div id="home-view">
       <div class="wrap">
-        <section class="hero">
-          <div class="hero-grid">
+        <section class="fg-masthead" aria-label="Simply Explained by Suraj Padmakaran">
+          <p class="fg-mast-top">A SafeGrade project &middot; A new chapter every Saturday</p>
+          <img class="fg-seal" src="https://surajpadmakaran.github.io/assets/safegrade-logo-256.png" alt="SafeGrade seal" width="58" height="58" />
+          <h1 class="fg-name">Simply Explained</h1>
+          <p class="fg-byline">by Suraj Padmakaran</p>
+          <p class="fg-facts">Every chapter sourced from FBI &middot; FTC &middot; CISA guidance &middot; Free forever &middot; No ads &middot; No fear tactics</p>
+        </section>
+
+        <section class="fg-letter" aria-label="A letter from your host">
+          <figure class="fg-portrait">
+            <img src="https://surajpadmakaran.github.io/assets/suraj-photo-720.jpg" alt="Suraj Padmakaran" />
+            <figcaption>Suraj Padmakaran &mdash; your host</figcaption>
+          </figure>
+          <div class="fg-letter-body">
+            <p class="fg-dear">Dear reader,</p>
+            <p class="fg-promise"><em>Cybersecurity, explained simply.</em></p>
+            <p>Plain-English cybersecurity for the people attackers actually target &mdash; seniors answering scam calls, youngsters setting up their first accounts, families keeping a household safe online.</p>
+            <p>No jargon and no scare tactics: what the attacks look like, and the few habits that stop most of them. For fellow practitioners, the technical field notes live on their own page &mdash; the Field Notes tab above.</p>
+            <p class="fg-sign">&mdash; Suraj</p>
+            <p class="fg-creds">Cybersecurity practitioner &middot; CISA &middot; CRISC &middot; Security+</p>
+          </div>
+        </section>
+
+
+        
+
+        <section class="sub-band" aria-label="Subscribe to the newsletter">
           <div>
-          <div class="rule"></div>
-          <h1>Simply Explained<br /><em>by Suraj.</em></h1>
-          <p class="lede">Plain-English cybersecurity for the people attackers actually target — seniors answering scam calls, youngsters setting up their first accounts, families keeping a household safe online. No jargon and no scare tactics: what the attacks look like, and the few habits that stop most of them. For fellow practitioners, the technical field notes live on their own page — the Field Notes tab above.</p>
+            <div class="panel-head">
+              <img class="seal seal-panel" src="https://surajpadmakaran.github.io/assets/safegrade-logo-256.png" alt="" aria-hidden="true" />
+              <div>
+                <div class="kicker">The free newsletter</div>
+                <h2>The Saturday Letter</h2>
+              </div>
+            </div>
+            <p>One chapter every Saturday, and a short alert whenever a scam is moving — free, in plain English. Your first letter brings a free <strong>Online Safety 101</strong> guide — pick yours on the form.</p>
           </div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/surajpadmakaran" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/surajpadmakaran', 'popupwindow')" class="embeddable-buttondown-form">
+            <input type="hidden" name="embed" value="1" />
+            <label for="bd-email-top">Enter your email</label>
+            <input type="email" name="email" id="bd-email-top" required />
+            <label for="bd-guide-top">Pick your free guide</label>
+            <select name="metadata__guide_choice" id="bd-guide-top" required>
+              <option value="" disabled selected>Choose your free guide…</option>
+              <option value="Senior Online Safety 101">Senior Online Safety 101</option>
+              <option value="Parent Online Safety 101">Parent Online Safety 101</option>
+              <option value="Teen Online Safety 101">Teen Online Safety 101</option>
+              <option value="Online Safety 101">Online Safety 101</option>
+            </select>
+            <input type="submit" value="Subscribe" />
+            <p><a href="https://buttondown.com/refer/surajpadmakaran" target="_blank" rel="noopener">Powered by Buttondown.</a></p>
+            <p class="bd-fallback">Form misbehaving? <a href="https://buttondown.com/surajpadmakaran" target="_blank" rel="noopener">Subscribe on the Buttondown page instead →</a></p>
+          </form>
+        </section>
+
+        <section class="block" id="alerts" aria-label="Scam alerts">
+          <div class="section-head">
+            <h2>Scam Alerts</h2>
+            <span class="note">short · two minutes · sourced</span>
           </div>
+          <a class="alert-card" href="#post/usps-couldnt-deliver-your-package-text" data-nav>
+            <span class="alert-top"><img class="seal seal-alert" src="https://surajpadmakaran.github.io/assets/safegrade-logo-256.png" alt="" aria-hidden="true" /><span class="alert-tag">Scam Alert · Verified</span></span>
+            <h3>“Unpaid Toll” Text? It’s Probably a Scam</h3>
+            <p>A text says you owe a few dollars for a toll, and a late fee is coming if you don’t pay now. It’s built to make you tap before you think. Here is the whole trick, in two minutes.</p>
+            <span class="alert-src">Sources: FBI IC3 · FTC — checked Nov 14, 2026</span>
+            <span class="alert-foot"><span class="alert-go">Read the alert →</span><span class="alert-meta">2 min read</span></span>
+          </a>
         </section>
 
                 <section class="block" id="monitor" aria-label="Threat monitor">
